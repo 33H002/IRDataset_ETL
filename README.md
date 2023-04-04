@@ -10,8 +10,8 @@ class Base:
     SMDB_USER = 
     SMDB_PASSWORD = 
     SMDB_SCHEMA = 
-    SMDB_IR140 = # 추출 DB명
-    SMDB_IR180 = # 추출 DB명
+    SMDB_IR140 = {추출 DB명}
+    SMDB_IR180 = {추출 DB명}
     
     MYSQL_URL = 
     MYSQL_PORT = 

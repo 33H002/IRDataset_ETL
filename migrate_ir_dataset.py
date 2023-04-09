@@ -16,7 +16,7 @@ from ir_dataset_generator import IRDatasetGenerator
 if __name__ == "__main__":
 
     '''set logger'''
-    sentry.init(Config.PROFILE, 'webcrawler')
+    sentry.init(Config.PROFILE, 'etl')
     logging.basicConfig(level=logging.INFO,
                         stream=sys.stdout,
                         format='%(asctime)s [%(filename)s] %(message)s',

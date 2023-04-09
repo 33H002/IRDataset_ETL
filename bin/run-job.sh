@@ -3,4 +3,4 @@
 SENTRY_RELEASE=$(git rev-parse HEAD)
 export SENTRY_RELEASE
 
-python facebook_ad_insights_extra_collect.py
+python get_ir_dataset.py

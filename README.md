@@ -18,6 +18,8 @@ class Base:
     MYSQL_UESR = 
     MYSQL_PASSWORD = 
     MYSQL_DB = 
+    
+    SENTRY_DSN =
         
         
 # oracle        

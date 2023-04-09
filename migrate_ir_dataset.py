@@ -2,6 +2,8 @@
  # migrate_ir_dataset.py
  ##
 
+import sys
+import sentry
 import logging
 
 import pandas as pd
@@ -11,17 +13,14 @@ from config import MYSQLIRConfig as MyConfig
 from ir_dataset_generator import IRDatasetGenerator
 
 
-if __name__ == '__main__':
-    
+if __name__ == "__main__":
+
     '''set logger'''
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-
-    formatter = logging.Formatter('%(asctime)s - %(message)s')
-
-    stream_hander = logging.StreamHandler()
-    stream_hander.setFormatter(formatter)
-    logger.addHandler(stream_hander)
+    sentry.init(Config.PROFILE, 'etl')
+    logging.basicConfig(level=logging.INFO,
+                        stream=sys.stdout,
+                        format='%(asctime)s [%(filename)s] %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S') 
     
     tablenames = MyConfig.DB_LIST[-1]
     

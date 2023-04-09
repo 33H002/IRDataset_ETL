@@ -1,0 +1,5 @@
+pandas
+cx_Oracle
+pymysql
+sqlalchemy
+sentry-sdk
